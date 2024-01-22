@@ -1,0 +1,133 @@
+.comment {
+  display: flex;
+  column-gap: 10px;
+  &__right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &__name {
+    font-size: 12px;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: var(--transition-time);
+    &:hover {
+      color: var(--main-color-ex);
+    }
+  }
+  &__content {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__time {
+    color: var(--desc-color);
+    font-size: 12px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: var(--black-white);
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: var(--transition-time);
+    &:hover {
+      background: var(--bg-color);
+    }
+    &:active {
+      background: var(--bg-color-ex);
+    }
+    &-icon {
+      font-size: 15px;
+    }
+  }
+  &__hr {
+    height: 1px;
+    background: var(--bg-color-ex);
+    margin-bottom: 20px;
+  }
+}
+
+.addcomment {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  margin-top: 20px;
+  &__center {
+    width: 90%;
+    position: relative;
+  }
+  &__btns {
+    position: absolute;
+    right: 5px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__input {
+    width: 100%;
+    resize: none;
+    padding: 14px 100px 14px 20px;
+    background: var(--bg-color);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: var(--black-white);
+    transition: var(--transition-time);
+    overflow: hidden;
+    position: relative;
+    &-limit {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: var(--desc-color);
+      font-size: 13px;
+    }
+    &:hover, &:focus {
+      background: var(--bg-color-ex);
+    }
+    &::placeholder {
+      color: var(--desc-color);
+    }
+  }
+  &__btn {
+    background: none;
+    border: none;
+    color: var(--desc-color-ex);
+    cursor: pointer;
+    transition: var(--transition-time);
+    &:hover {
+      color: var(--main-color);
+    }
+    &-icon {
+      font-size: 25px;
+    }
+  }
+  &__add {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition-time);
+    &-icon {
+      font-size: 20px;
+      color: var(--black-white);
+    }
+    &:hover {
+      background: var(--bg-color);
+    }
+    &:active {
+      background: var(--bg-color-ex);
+    }
+  }
+}

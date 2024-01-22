@@ -1,0 +1,232 @@
+.post {
+  color: var(--black-white);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    &-name {
+      font-size: 13px;
+      color: var(--main-color);
+      cursor: pointer;
+      transition: var(--transition-time);
+      &:hover {
+        color: var(--main-color-ex);
+      }
+    }
+    &-time {
+        font-size: 12px;
+        color: var(--desc-color);
+    }
+  }
+  &__more {
+    background: none;
+    border: none;
+    color: var(--desc-color);
+    position: relative;
+    &-icon {
+      font-size: 30px;
+      transition: var(--transition-time);
+      cursor: pointer;
+      &:hover {
+        color: var(--black-white);
+      }
+    }
+    &-menu {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      background: var(--white-black);
+      width: 250px;
+      display: none;
+      z-index: 2;
+      border-radius: 10px 0 10px 10px;
+      padding: 10px;
+      flex-direction: column;
+      &.open {
+        display: flex;
+      }
+    }
+    &-btn {
+      background: none;
+      border: none;
+      color: var(--black-white);
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: var(--transition-time);
+      &:hover {
+        background: var(--bg-color);
+      }
+      &:active {
+        background: var(--bg-color-ex);
+      }
+      &.error, &.error &_icon {
+        color: var(--error-color);
+      }
+      &_icon {
+        font-size: 20px;
+        color: var(--main-color);
+      }
+    }
+  }
+  &__desc {
+    line-height: 25px;
+    font-size: 17px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: var(--black-white);
+    background: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition-time);
+    &.like {
+      color: var(--error-color);
+    }
+    &.share {
+      color: var(--main-color);
+    }
+    &:hover {
+      background: var(--bg-color-ex);
+    }
+    &.active {
+      background: var(--bg-color-ex1);
+    }
+    &:active {
+      background: var(--bg-color-ex1);
+    }
+    &-icon {
+      font-size: 20px;
+    }
+  }
+  &__viewcount {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 14px;
+    color: var(--desc-color);
+  }
+  &__content {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      z-index: 0;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &-btn {
+      position: absolute; // изменено на relative
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      transition: var(--transition-time);
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.left {
+        left: 10px;
+        background: none;
+        border: none;
+      }
+
+      &.right {
+        right: 10px;
+        background: none;
+        border: none;
+      }
+    }
+    &-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+    }
+    &-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: var(--transition-time) all;
+      &.active {
+        background-color: var(--main-color);
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  &__hr {
+    background: var(--bg-color-ex);
+    height: 1px;
+
+  }
+  &__comment {
+    &-btn {
+      background: none;
+      border: none;
+      color: var(--desc-color);
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      transition: var(--transition-time);
+      cursor: pointer;
+      margin-left: 50px;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+}

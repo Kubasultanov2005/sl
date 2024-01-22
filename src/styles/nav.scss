@@ -1,0 +1,37 @@
+.nav {
+  width: calc(20% - (20px * 2 / 3));
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border: none;
+    background: none;
+    color: var(--black-white);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: var(--transition-time);
+    &:hover, &:active {
+      background: var(--bg-color-ex);
+    }
+    &:hover &-icon {
+      transform: scale(1.2);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+    &-icon {
+      font-size: 20px;
+      color: var(--main-color);
+    }
+  }
+
+}

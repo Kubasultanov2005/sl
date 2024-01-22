@@ -1,0 +1,225 @@
+.create {
+  color: var(--black-white);
+  background: var(--white-black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow: auto;
+  &.open {
+    display: flex;
+
+  }
+  &.open body {
+    overflow: hidden;
+  }
+  &__row {
+    display: flex;
+  }
+  &.top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &__blog {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 400px;
+  }
+  &__info {
+    width: 400px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    &-user {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+    &-desc {
+      position: relative;
+      width: 100%;
+    }
+    &-input {
+      width: 100%;
+      resize: none;
+      padding: 14px;
+      background: var(--bg-color);
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      color: var(--black-white);
+      transition: var(--transition-time);
+      &-limit {
+        position: relative;
+        bottom: 30px;
+        left: 10px;
+        color: var(--desc-color);
+        font-size: 13px;
+      }
+      &:hover, &:focus {
+        background: var(--bg-color-ex);
+      }
+      &::placeholder {
+        color: var(--desc-color);
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 17px;
+  }
+  &__no {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    &-icon {
+      margin: 0 auto;
+      font-size: 70px;
+    }
+    &-btn {
+      color: white;
+      background: var(--main-color);
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: var(--transition-time);
+      &:hover, &:active {
+        background: var(--main-color-ex);
+      }
+    }
+  }
+  &__content {
+
+    &-btn {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 30px;
+      padding: 7px 5px 5px 7px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: var(--transition-time);
+      &:hover, &:active {
+        //opacity: 0.5;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+  &__step {
+    color: var(--desc-color);
+  }
+  &__settings {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 10px;
+      transition: var(--transition-time);
+      &:hover {
+        //background: var(--bg-color);
+      }
+    }
+  }
+  &__setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    color: var(--black-white);
+    cursor: pointer;
+    &-left {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+    }
+    &-icon {
+      font-size: 20px;
+    }
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: var(--box-shadow-color-ex);
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+  &__final {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: var(--main-color);
+    text-align: center;
+    &-icon {
+      margin: 0 auto;
+      font-size: 70px;
+    }
+    &-title {
+      color: var(--black-white);
+      font-size: 20px;
+      font-weight: 600;
+    }
+    &-btn {
+      color: white;
+      background: var(--main-color);
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: var(--transition-time);
+      &:hover, &:active {
+        background: var(--main-color-ex);
+      }
+    }
+  }
+  &__loading{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--box-shadow-color);
+    z-index: 3;
+  }
+  &__loading-icon{
+    font-size: 20px;
+    cursor: inherit;
+    border: none;
+    border-top: 2px solid var(--main-color);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 0.5s linear infinite;
+    margin: 20px auto;
+    z-index: 10;
+  }
+}
